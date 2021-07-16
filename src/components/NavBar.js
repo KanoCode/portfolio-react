@@ -14,18 +14,18 @@ const NavBar = () => {
           <Link to="/"> 1. About </Link>
         </li>
         <li>
-          <Link to="/Portfolio"> 2. Portfolio </Link>
+          <Link to="/porfolio"> 2. Portfolio </Link>
         </li>
         <li>
           {" "}
-          <Link to="/Contact">3. Contact</Link>
+          <Link to="/contact">3. Contact</Link>
         </li>
       </ul>
     </NavStyles>
   );
 };
 
-const NavStyles = styled.div`
+const NavStyles = styled.nav`
   display: flex;
 
   justify-content: space-between;

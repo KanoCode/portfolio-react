@@ -7,16 +7,17 @@ import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
 
 const AboutMe = () => {
+  const SpanVariants = {
+    visible: { opacity: 1, transition: { duration: 3 } },
+    hidden: { opacity: 0 },
+  };
+
   return (
     <ImageStyled>
       <div className="StyledSocial">
         <SocialLinks />
       </div>
       <div className="description">
-        <div>
-          <h1 id="Name">Kanombola Kanombola </h1>
-        </div>
-
         <div className="content">
           <Typewriter
             options={{
@@ -32,16 +33,17 @@ const AboutMe = () => {
           />
         </div>
         <div>
-          <h2>
-            Let Me{" "}
+          <p>
+            Let me{" "}
             <motion.span
-              animate={{ opacity: 1, transition: { duration: 4 } }}
-              initial={{ opacity: 0 }}
+              variants={SpanVariants}
+              initial="hidden"
+              animate="visible"
             >
-              CREATE{" "}
+              CREATE
             </motion.span>
-            Your Online Presence
-          </h2>
+            your online presence
+          </p>
         </div>
         <button>Get in touch</button>
       </div>
@@ -73,10 +75,6 @@ const ImageStyled = styled.div`
   }
   h2 {
     font-weight: lighter;
-  }
-  #Name {
-    font-size: xx-large;
-    font-size: bolder;
   }
   .description {
     box-sizing: border-box;
